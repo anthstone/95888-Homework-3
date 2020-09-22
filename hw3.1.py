@@ -58,18 +58,10 @@ function from some other library/module.  Write your own code!  Check
 Wikipedia, Wolfram, or elsewhere to make sure you have the correct formulas.
 """
 
-#2A). 
+#2A). []
 """
-Open the mystats.py file (uploaded to Canvas as part of this homework) for
-editing and running with Python.  You will see that mystats.py mostly consists
-of comments describing functions that you will need to write, with a single 
-uncommented print() function call that displays the name of the module itself.
+GO TO MYSTATS.PY
 
-print('The current module is:', __name__)
-
-Run the module, and add a comment after the print() function call describing 
-the output when mystats.py is the main module, that is, the module that you are
-currently editing and testing.
 """
 
 #2B).
@@ -91,7 +83,7 @@ print() calls after you have confirmed that calling mean() with no argument
 fails.)
 """
 
-#2C).
+#2C). []
 """
 Improve your mean() function so that it accepts numeric iterables as well as 
 individual numeric values as arguments. To test whether a variable refers to an 
@@ -129,7 +121,7 @@ print('mean((1,), 2, 3, [4,6]) should be 3.2,' +
 Run the module and confirm success.
 """
 
-#2D).
+#2D). []
 """
 d.	At the top of your mystats.py file, insert the line:
 
@@ -166,7 +158,7 @@ Is the displayed mean “closer to” 0.0 than before?  Of course, this is a cas
 a rigorous test.
 """
 
-#2E).
+#2E). []
 """
 We can set the seed value for the random number generator with:
 	
@@ -188,7 +180,7 @@ Since you set the seed to 0.0 prior to this, you should get the same value that 
 0.7380231707288347
 """
 
-#2F).
+#2F). []
 """
 Define the stddev() function to compute the sample standard deviation of its arguments, where the arguments can be the same as those passed to the mean() function.  Add this code at the end of your program, then run the module.
 	
@@ -198,7 +190,7 @@ If you have defined stddev() correctly, you should get the same value that I do:
 1.0193909949356386
 """
 
-#2G).
+#2G). []
 """
 Define the median() function to compute the median of its arguments, where the arguments can be the same as those passed to the mean() function.  Add this code at the end of your program, then run the module.
 	
@@ -214,7 +206,7 @@ print("median(3, 1, 5, 9, 2):", median(3, 1, 5, 9, 2))
 If you have defined median() correctly, you should get 3.
 """
 
-#2H).
+#2H). []
 """
 h.	Define the mode() function to compute the mode of its arguments, where the 
 arguments can be the same as those passed to the mean() function.  The mode is 
@@ -235,7 +227,7 @@ time each.
 """
 
 
-#3 Modules
+#3 Modules []
 
 #3A).
 """
@@ -255,7 +247,7 @@ mystats.py is also executed when mystats.py is imported.  This is not the
 behavior that an importer of a library expects.
 """
 
-#3B).
+#3B). []
 """
 b.	Modify mystats.py so that its testing code is only executed when 
 mystats.py is the main module.  Then, run my_stat_test.py as the main module, 
@@ -266,7 +258,7 @@ is imported.
 
 #4 NumPY
 
-#4A).
+#4A). []
 """
 a.	In lecture, we introduced NumPy and its N-dimensional array type, ndarray.  
 We looked at ways to create ndarray objects, and at three ways for accessing 

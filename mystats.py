@@ -1,3 +1,18 @@
+#2A). 
+"""
+Open the mystats.py file (uploaded to Canvas as part of this homework) for
+editing and running with Python.  You will see that mystats.py mostly consists
+of comments describing functions that you will need to write, with a single 
+uncommented print() function call that displays the name of the module itself.
+
+print('The current module is:', __name__)
+
+Run the module, and add a comment after the print() function call describing 
+the output when mystats.py is the main module, that is, the module that you are
+currently editing and testing.
+"""
+
+
 import numpy as np
 # File: mystats.py
 
