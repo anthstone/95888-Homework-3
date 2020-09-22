@@ -1,7 +1,25 @@
-
+import numpy as np
 # File: mystats.py
 
 # define the mean function here
+def is_iter(v):
+    v_is_iter = True
+    try:
+        iter(v)
+    except:
+        v_is_iter = False
+    return v_is_iter
+
+def mean(*num):
+    totalSum = 0.0
+    count = 0
+    if is_iter(num) is True:
+        print('aaaa',num[0],num,len(num))
+        return sum(num)/len(num)
+    for n in num: 
+        totalSum += n
+        count += 1
+    return totalSum/count
 
 # define the stddev function here
 
@@ -11,6 +29,7 @@
 
 # part (a)
 print('The current module is:', __name__)
+# The current module is: __main__
 
 # part (b)
 # print('mean(1) should be 1.0, and is:', mean(1))
