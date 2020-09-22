@@ -208,7 +208,7 @@ If you have defined median() correctly, you should get 3.
 
 #2H). []
 """
-h.	Define the mode() function to compute the mode of its arguments, where the 
+h.	Define the () function to compute the mode of its arguments, where the 
 arguments can be the same as those passed to the mean() function.  The mode is 
 usually used with integer counts, rather than floating point values.  Since a 
 data set can be multimodal (that is, have two or more values that each occur 

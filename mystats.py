@@ -67,11 +67,33 @@ def median(*num):
 # define the mode function here
 
 def mode(*num):
+    mode_dict = {}
+    dict_item_value = 0
+    max_value_key = ()
     for item in num:
         if is_iter(item):
-            
+            #check to see if value is a key in dictonary
+            if item in mode_dict.keys():
+                #if value does exist, then pull value assigned and iterate
+                dict_item_value = mode_dict[num[item]] + 1
+                mode_dict[item] = dict_item_value
+                print(mode_dict)
+            else:
+                #if value does not exist then add and make value 1
+                mode_dict.update({num[item]: 1})
         else:
-
+            #do something
+            pass
+    dict_max_value = max(mode_dict, key=mode_dict.get())
+    for key in mode_dict:
+        for row in key:
+           if row == dict_max_value:
+                max_value_key = max_value_key + (row ,)
+    return max_value_key
+    #find max value in mode_dict
+    #go through dictionary and 
+        
+        
 # part (a)
 print('The current module is:', __name__)
 # The current module is: __main__

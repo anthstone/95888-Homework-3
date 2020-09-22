@@ -1,4 +1,5 @@
-
+import mystats as ms
+import numpy as np
 # File: my_stat_test.py
 
 np.random.seed(0)    # make sure everyone gets the same answers
@@ -20,9 +21,10 @@ int_set1 = { 5, 6, 7, 4, 5, 4, 9, 8, 0, 1, 5, 4, 4, 2 }
 int_set2 = { np.random.randint(1000) for i in range(1000) }
 
 print("mean of int_list1:", ms.mean(int_list1))
-print("stddev of int_list1:", ms.stddev(int_list1))
+print("stddev of int_list1:", ms.stddev(int_list1))#Errors
 print("median of int_list1:", ms.median(int_list1))
 print("mode of int_list1:", ms.mode(int_list1))
+
 
 print("mean of int_list2:", ms.mean(int_list2))
 print("stddev of int_list2:", ms.stddev(int_list2))
