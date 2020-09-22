@@ -15,7 +15,6 @@ def mean(*num):
     totalSum = 0.0
     count = 0
     for item in num: 
-
         if is_iter(item):
             totalSum += sum(item)
             count += len(item)
@@ -28,7 +27,14 @@ def mean(*num):
 # define the stddev function here
 
 def stddev(*num):
-    average = mean(mean(num))
+    data = []
+    for m in num:
+        if is_iter(m):
+            for o in m:
+                data.append(o)
+        else:
+            data.append(m)
+    average = mean(data)
     totalSum = 0.0
     count = 0
     for item in num: 
@@ -47,50 +53,45 @@ def stddev(*num):
 
 # define the median function here
 def median(*num):
-    num = np.sort(num)
-    for item in num: 
-        if is_iter(item):
-            if(len(num[0])%2 == 0):
-                lower_index = int(len(num[0])/2-1)
-                upper_index = int(len(num[0])/2)
-                return (num[0][lower_index]+num[0][upper_index])/2
-            else:
-                return num[0][int((len(num[0])-1)/2)]
+    data = []
+    for m in num:
+        if is_iter(m):
+            for o in m:
+                data.append(o)
         else:
-            if(len(num)%2 == 0):
-                return (num[len(num)/2-1]+num[len(num)/2])/2
-            else:
-                return num[int((len(num)-1)/2)]
+            data.append(m)
+    data.sort()
+    for i in data: 
+        if(len(data)%2 == 0):
+            return (data[int(len(data)/2-1)]+data[int(len(data)/2)])/2
+        else:
+            return data[int((len(data)-1)/2)]
 
 
 
 # define the mode function here
-
 def mode(*num):
+    my_args = list()
     mode_dict = {}
-    dict_item_value = 0
-    max_value_key = ()
     for item in num:
         if is_iter(item):
-            #check to see if value is a key in dictonary
-            if item[0] in mode_dict.keys():
-                #if value does exist, then pull value assigned and iterate
-                dict_item_value = mode_dict[item[0]] + 1
-                mode_dict[item[0]] = dict_item_value
-                print(mode_dict)
-            else:
-                #if value does not exist then add and make value 1calc
-                mode_dict.update({item[0]: 1})
+            for x in item:
+                my_args.append(x)
         else:
-            #do something
-            pass
-    dict_max_value = max(mode_dict, key = lambda x: mode_dict[x])
-    max_value_key = [i for i, max_val in mode_dict.items() if max_val == dict_max_value]
+            my_args.append(item)
+    for i in my_args:
+        if i in mode_dict.keys():
+            dict_item_value = mode_dict[i] + 1
+            mode_dict[i] = dict_item_value
+        else:
+            mode_dict.update({i: 1})
+    dict_items = mode_dict.items()
+    dict_max_value = max(list(mode_dict.values()))
+    max_value_key = tuple(i for i, q in mode_dict.items() if q == dict_max_value)
+    for item in dict_items:
+        if item == dict_max_value:
+            max_value_key.append(item)
     return max_value_key
-    #find max value in mode_dict
-    #go through dictionary and 
-        
-        
 # part (a)
 print('The current module is:', __name__)
 # The current module is: __main__
