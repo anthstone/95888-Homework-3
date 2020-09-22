@@ -73,22 +73,19 @@ def mode(*num):
     for item in num:
         if is_iter(item):
             #check to see if value is a key in dictonary
-            if item in mode_dict.keys():
+            if item[0] in mode_dict.keys():
                 #if value does exist, then pull value assigned and iterate
-                dict_item_value = mode_dict[num[item]] + 1
-                mode_dict[item] = dict_item_value
+                dict_item_value = mode_dict[item[0]] + 1
+                mode_dict[item[0]] = dict_item_value
                 print(mode_dict)
             else:
-                #if value does not exist then add and make value 1
-                mode_dict.update({num[item]: 1})
+                #if value does not exist then add and make value 1calc
+                mode_dict.update({item[0]: 1})
         else:
             #do something
             pass
-    dict_max_value = max(mode_dict, key=mode_dict.get())
-    for key in mode_dict:
-        for row in key:
-           if row == dict_max_value:
-                max_value_key = max_value_key + (row ,)
+    dict_max_value = max(mode_dict, key = lambda x: mode_dict[x])
+    max_value_key = [i for i, max_val in mode_dict.items() if max_val == dict_max_value]
     return max_value_key
     #find max value in mode_dict
     #go through dictionary and 
